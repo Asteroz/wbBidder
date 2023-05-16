@@ -16,6 +16,8 @@
 		44920A142A13ABD40005044D /* wbBidderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44920A132A13ABD40005044D /* wbBidderTests.swift */; };
 		44920A1E2A13ABD40005044D /* wbBidderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44920A1D2A13ABD40005044D /* wbBidderUITests.swift */; };
 		44920A202A13ABD40005044D /* wbBidderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44920A1F2A13ABD40005044D /* wbBidderUITestsLaunchTests.swift */; };
+		44920A2E2A13ACE70005044D /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44920A2D2A13ACE70005044D /* NetworkManagerTest.swift */; };
+		44920A312A13AE0A0005044D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44920A302A13AE0A0005044D /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		44920A192A13ABD40005044D /* wbBidderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wbBidderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44920A1D2A13ABD40005044D /* wbBidderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wbBidderUITests.swift; sourceTree = "<group>"; };
 		44920A1F2A13ABD40005044D /* wbBidderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wbBidderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		44920A2D2A13ACE70005044D /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		44920A302A13AE0A0005044D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		449209FB2A13ABD20005044D /* wbBidder */ = {
 			isa = PBXGroup;
 			children = (
+				44920A2F2A13ADF90005044D /* NetworkLayer */,
 				449209FC2A13ABD20005044D /* AppDelegate.swift */,
 				449209FE2A13ABD20005044D /* SceneDelegate.swift */,
 				44920A002A13ABD20005044D /* ViewController.swift */,
@@ -113,6 +118,7 @@
 		44920A122A13ABD40005044D /* wbBidderTests */ = {
 			isa = PBXGroup;
 			children = (
+				44920A2C2A13ACC20005044D /* NetworkService */,
 				44920A132A13ABD40005044D /* wbBidderTests.swift */,
 			);
 			path = wbBidderTests;
@@ -125,6 +131,30 @@
 				44920A1F2A13ABD40005044D /* wbBidderUITestsLaunchTests.swift */,
 			);
 			path = wbBidderUITests;
+			sourceTree = "<group>";
+		};
+		44920A2C2A13ACC20005044D /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				44920A2D2A13ACE70005044D /* NetworkManagerTest.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		44920A2F2A13ADF90005044D /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				44920A322A13AE100005044D /* Manager */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		44920A322A13AE100005044D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				44920A302A13AE0A0005044D /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44920A312A13AE0A0005044D /* NetworkManager.swift in Sources */,
 				44920A012A13ABD20005044D /* ViewController.swift in Sources */,
 				449209FD2A13ABD20005044D /* AppDelegate.swift in Sources */,
 				449209FF2A13ABD20005044D /* SceneDelegate.swift in Sources */,
@@ -268,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44920A2E2A13ACE70005044D /* NetworkManagerTest.swift in Sources */,
 				44920A142A13ABD40005044D /* wbBidderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -442,7 +474,6 @@
 				INFOPLIST_FILE = wbBidder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +501,6 @@
 				INFOPLIST_FILE = wbBidder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
